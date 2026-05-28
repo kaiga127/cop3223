@@ -15,7 +15,7 @@ int main(void) {
     }while (age < 1 || age > 120);
 
 
-    printf("Enter you initial (A-Z): ");
+    printf("Enter your initial (A-Z): ");
     fscanf(stdin, " %c", &initial);
     do {
         printf("Invalid input. Try again.\n");
