@@ -50,9 +50,9 @@ int main(void) {
                 fscanf(stdin, "%d", &n);
                 int prime_res = is_prime(n); 
                 if (prime_res == 1) {
-                    printf("%d is prime.\n", prime_res);
+                    printf("%d is prime.\n", n);
                 } else if (prime_res == 0) {
-                    printf("%d is not prime.\n", prime_res);
+                    printf("%d is not prime.\n", n);
                 }
                 break;
             case 4: 

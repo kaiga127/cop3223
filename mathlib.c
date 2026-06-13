@@ -15,9 +15,20 @@ int clamp(int value, int lo, int hi) {
 }
 
 double power(double base, int exp) {
-    double ans = 0;
-    for (; exp;) {
-        ans = base * exp;
+    double ans;
+    double expo = 1.0;
+
+    if (exp < 0) {
+        exp = -exp;
+        for (int i = 0; i < exp; i++) {
+            expo *= base;
+        }
+        ans = 1/expo;
+    } else {
+        for (int i = 0; i < exp; i++) {
+            expo *= base;
+        }
+        ans = expo;
     }
 
     return ans;
