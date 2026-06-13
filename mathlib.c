@@ -50,11 +50,27 @@ int is_prime(int n) {
 }
 
 int gcd(int a, int b) {
-    if (a == 0) {
-        return b;
+    int big;
+    int small;
+    int rem;
+
+    if (a > b) {
+        big = a;
+        small = b;
+    } else {
+        big = b;
+        small = a;
     }
 
-    return gcd(b % a, a);
+    rem = big % small;
+
+    while (rem != 0) {
+        big = small;
+        small = rem;
+        rem = big % small;
+    }
+
+    return small;
 }
 
 double average(int arr[], int len) {
